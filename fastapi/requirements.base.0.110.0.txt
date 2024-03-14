@@ -1,0 +1,33 @@
+# Python libraries
+requests==2.31.0
+pytz==2024.1
+pytest==8.1.1
+
+
+# FastAPI libraries
+asyncpg==0.29.0
+email-validator==2.1.1
+fastapi==0.110.0
+fastapi-pagination==0.12.19
+fast-alchemy-models @ git+https://github.com/ludensproductions/fast-alchemy-models.git
+sqlalchemy==2.0.28
+sqlalchemy_mixins==2.0.5
+uvicorn==0.28.0
+# TODO: change this when 0.1.3 is released
+pydantic-async-validation @ git+https://github.com/team23/pydantic-async-validation.git@main
+pydantic-settings==2.2.1
+
+# FastAPI miscellaneous
+python-jose==3.3.0
+slowapi==0.1.9
+
+# Django password hashing
+passlib==1.7.4
+
+# Dependency for swagger login (OAuth2PasswordRequestForm)
+python-multipart==0.0.9
+
+# Developer Tools
+alembic==1.13.1
+pre-commit==3.6.2
+typer==0.9.0
