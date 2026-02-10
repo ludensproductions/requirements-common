@@ -26,7 +26,7 @@ django-simple-history @ git+https://github.com/ludensproductions/django-simple-h
 whitenoise==6.11.0
 
 # Django Ninja
-django-ninja==1.4.5
+django-ninja==1.4.1
 django-ninja-extra==0.30.0
 django-ninja-jwt==5.4.4
 
