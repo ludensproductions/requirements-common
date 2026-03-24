@@ -28,7 +28,7 @@ whitenoise==6.11.0
 # Django Ninja
 django-ninja==1.6.2
 django-ninja-extra==0.31.2
-django-ninja-jwt==5.3.2
+django-ninja-jwt==5.4.4
 
 # Django REST framework
 djangorestframework==3.16.1
