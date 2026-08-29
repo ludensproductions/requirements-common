@@ -1,0 +1,51 @@
+[project]
+name = "django-base"
+version = "3.0.0"
+description = "Shared Django stack for the django:5.2-3.13-3.0 base image"
+requires-python = ">=3.13"
+dependencies = [
+    # Python libraries
+    "Pillow==12.1.0",
+    "psycopg[binary,pool]==3.3.2",
+    "psycopg-pool==3.3.1",           # pinned to keep the projects in step
+    "requests==2.32.5",
+    "python-dotenv==1.2.1",
+    "python-json-logger==4.0.0",
+    "Unidecode==1.4.0",
+    "redis==7.1.1",                  # redis-py 8 defaults to RESP3, which Redis 5 cannot answer
+
+    # Django libraries
+    "Django==5.2.11",
+    "django-crispy-forms==2.5",
+    "crispy-bootstrap5==2025.6",
+    "django-filter==25.2",
+    "django-safedelete==1.4.1",
+    "django-q2==1.9.0",
+    "django-simple-history",         # fork, see [tool.uv.sources]
+    "whitenoise==6.11.0",
+
+    # ASGI and realtime
+    "channels[daphne]==4.3.2",
+    "channels-redis==4.3.0",
+    "twisted[tls,http2]==26.4.0",
+    "django-eventstream==5.3.3",
+
+    # Django Ninja
+    "django-ninja==1.6.2",
+    "django-ninja-extra==0.31.4",
+    "django-ninja-jwt==5.4.4",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+bypass-selection = true
+
+[tool.uv]
+package = false
+required-version = "==0.10.2"
+
+[tool.uv.sources]
+django-simple-history = { git = "https://github.com/ludensproductions/django-simple-history", rev = "7032557eb23e2c5385e3f4d9ec82dff486c0be5d" }
